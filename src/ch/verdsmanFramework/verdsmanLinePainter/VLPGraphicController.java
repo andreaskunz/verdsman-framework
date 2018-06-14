@@ -14,6 +14,11 @@ public class VLPGraphicController {
 	FPJFrame frame;
 	Dimension displaySize;
 	
+	public static VLPGraphicController createVLPGraphicController(Dimension displaySize) {
+		return new VLPGraphicController(displaySize);
+	}
+	
+	
 	public VLPGraphicController(Dimension displaySize) {
 		canvas = new FPCanvas(displaySize, Color.BLACK);
 		frame = new FPJFrame(canvas, displaySize);
